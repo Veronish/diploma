@@ -1,0 +1,1 @@
+﻿Data Source=F:\GlobalDateBase.db; Version=3;
