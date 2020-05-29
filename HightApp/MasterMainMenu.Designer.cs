@@ -155,7 +155,6 @@
             this.Controls.Add(this.emploeeListBtn);
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.labelinfo2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "MasterMainMenu";
             this.Text = "UserMainMenu";
             this.Load += new System.EventHandler(this.UserMainMenu_Load);
