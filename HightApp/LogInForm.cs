@@ -44,6 +44,7 @@ namespace HightApp
         /* Переменные, которые будут хранить на протяжение работы программы логин и пароль. */
         public string login = string.Empty;
         public string password = string.Empty;
+        
 
         public LogInForm()
         {
@@ -111,7 +112,7 @@ namespace HightApp
                 else if (StatClass.users.Count == i) { MessageBox.Show("Пользователь " + loginTextBox.Text + " не найден!"); }
                 // i++;
             }
-                catch { MessageBox.Show("Неверный пароль!");  }
+                catch { MessageBox.Show("Ошибка! Проверьте правильность введенных данных!");  }
             }
 
             

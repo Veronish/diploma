@@ -16,34 +16,52 @@ namespace HightApp
         public PartsListForm()
         {
             InitializeComponent();
+
             LoadParts.Load();
             DataGreedFill();
 
         }
         public void DataGreedFill()
         {
+
             dataGridView1.Rows.Clear();
             bindingSource = new BindingSource();
             bindingSource.DataSource = StatClass.parts;
             dataGridView1.DataSource = bindingSource;
-          //  Part part = new Part();
-          //  part.Prise; master1
-            // dataGridView1.AutoGenerateColumns = true;
+        }
 
-            //int i = 1;
-            //int j = 1;
-            //foreach (Part part in StatClass.parts)
-            //{                
-            //    dataGridView1.Rows[j].Cells[i].Value = part.PartId; j++;
-            //    dataGridView1.Rows[j].Cells[i].Value = part.Mark; j++;
-            //    dataGridView1.Rows[j].Cells[i].Value = part.Model; j++;
-            //    dataGridView1.Rows[j].Cells[i].Value = part.Description; j++;
-            //    dataGridView1.Rows[j].Cells[i].Value = part.Remains; j++;
-            //    dataGridView1.Rows[j].Cells[i].Value = part.Prise; j++;
-            //    i++;
-            //    // dataGrid.Rows[i].Cells[j].Value = arr[i, j];
-            //}
+        private void AddPartButton_Click(object sender, EventArgs e)
+        {
+            AddPartForm addPartForm = new AddPartForm();
+            addPartForm.Show();
+            this.Close();
 
+        }
+
+        private void EditPartBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DelitePartBtn_Click(object sender, EventArgs e)
+        {
+            int check = Int32.Parse(dataGridView1.SelectedCells[0].Value.ToString());
+
+            try
+            {
+                foreach (Part part in StatClass.parts)
+                {
+                    if (check == part.PartId)  // || check == part.Model || check == part.Mark || check == part.Description || check == part.Prise.ToString() || check == part.Remains.ToString())
+                    {
+                        MessageBox.Show("FFFFFFFFFFFFFFFFFFFFFFFFF");
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Для изменения конкретной детали выберите ее инвентарный номер", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+               
         }
     }
 }

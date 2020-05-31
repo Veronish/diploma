@@ -28,16 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.labelinfo2 = new System.Windows.Forms.Label();
             this.labelUserName = new System.Windows.Forms.Label();
             this.emploeeListBtn = new System.Windows.Forms.Button();
             this.jobAssignmentBtn = new System.Windows.Forms.Button();
             this.availableTechnicBtn = new System.Windows.Forms.Button();
             this.partsBtn = new System.Windows.Forms.Button();
-            this.label_time = new System.Windows.Forms.Label();
-            this.label_data = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -106,30 +102,6 @@
             this.partsBtn.UseVisualStyleBackColor = true;
             this.partsBtn.Click += new System.EventHandler(this.partsBtn_Click);
             // 
-            // label_time
-            // 
-            this.label_time.AutoSize = true;
-            this.label_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_time.Location = new System.Drawing.Point(477, 60);
-            this.label_time.Name = "label_time";
-            this.label_time.Size = new System.Drawing.Size(70, 25);
-            this.label_time.TabIndex = 7;
-            this.label_time.Text = "label1";
-            // 
-            // label_data
-            // 
-            this.label_data.AutoSize = true;
-            this.label_data.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_data.Location = new System.Drawing.Point(477, 110);
-            this.label_data.Name = "label_data";
-            this.label_data.Size = new System.Drawing.Size(70, 25);
-            this.label_data.TabIndex = 8;
-            this.label_data.Text = "label2";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -147,8 +119,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 339);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label_data);
-            this.Controls.Add(this.label_time);
             this.Controls.Add(this.partsBtn);
             this.Controls.Add(this.availableTechnicBtn);
             this.Controls.Add(this.jobAssignmentBtn);
@@ -157,7 +127,6 @@
             this.Controls.Add(this.labelinfo2);
             this.Name = "MasterMainMenu";
             this.Text = "UserMainMenu";
-            this.Load += new System.EventHandler(this.UserMainMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,9 +140,6 @@
         private System.Windows.Forms.Button jobAssignmentBtn;
         private System.Windows.Forms.Button availableTechnicBtn;
         private System.Windows.Forms.Button partsBtn;
-        private System.Windows.Forms.Label label_time;
-        private System.Windows.Forms.Label label_data;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
     }
 }

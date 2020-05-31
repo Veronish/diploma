@@ -35,14 +35,16 @@
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remains = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prise = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.addPartButton = new System.Windows.Forms.Button();
+            this.delitePartBtn = new System.Windows.Forms.Button();
+            this.editPartBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PartId,
@@ -53,7 +55,8 @@
             this.Prise});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(633, 179);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(659, 233);
             this.dataGridView1.TabIndex = 0;
             // 
             // PartId
@@ -92,44 +95,47 @@
             this.Prise.HeaderText = "Стоимость";
             this.Prise.Name = "Prise";
             // 
-            // button1
+            // addPartButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(12, 251);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 42);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addPartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addPartButton.Location = new System.Drawing.Point(12, 251);
+            this.addPartButton.Name = "addPartButton";
+            this.addPartButton.Size = new System.Drawing.Size(122, 42);
+            this.addPartButton.TabIndex = 1;
+            this.addPartButton.Text = "Добавить";
+            this.addPartButton.UseVisualStyleBackColor = true;
+            this.addPartButton.Click += new System.EventHandler(this.AddPartButton_Click);
             // 
-            // button2
+            // delitePartBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(252, 251);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 42);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.delitePartBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.delitePartBtn.Location = new System.Drawing.Point(557, 251);
+            this.delitePartBtn.Name = "delitePartBtn";
+            this.delitePartBtn.Size = new System.Drawing.Size(114, 42);
+            this.delitePartBtn.TabIndex = 2;
+            this.delitePartBtn.Text = "Удалить";
+            this.delitePartBtn.UseVisualStyleBackColor = true;
+            this.delitePartBtn.Click += new System.EventHandler(this.DelitePartBtn_Click);
             // 
-            // button3
+            // editPartBtn
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(132, 251);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 42);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.editPartBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editPartBtn.Location = new System.Drawing.Point(140, 251);
+            this.editPartBtn.Name = "editPartBtn";
+            this.editPartBtn.Size = new System.Drawing.Size(125, 42);
+            this.editPartBtn.TabIndex = 3;
+            this.editPartBtn.Text = "Изменить";
+            this.editPartBtn.UseVisualStyleBackColor = true;
+            this.editPartBtn.Click += new System.EventHandler(this.EditPartBtn_Click);
             // 
             // PartsListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 305);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(683, 305);
+            this.Controls.Add(this.editPartBtn);
+            this.Controls.Add(this.delitePartBtn);
+            this.Controls.Add(this.addPartButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "PartsListForm";
             this.Text = "PartsListForm";
@@ -147,8 +153,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remains;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prise;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button addPartButton;
+        private System.Windows.Forms.Button delitePartBtn;
+        private System.Windows.Forms.Button editPartBtn;
     }
 }

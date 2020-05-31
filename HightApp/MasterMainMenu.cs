@@ -19,22 +19,11 @@ namespace HightApp
             InitializeComponent();
             labelUserName.Text = StatClass.global_Name;
 
-            timer1.Enabled = true;
-            timer1.Interval = 1000;
             
         }
 
       
-        private void UserMainMenu_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            label_time.Text = DateTime.Now.ToLongTimeString();
-            label_data.Text = DateTime.Now.ToShortDateString();
-        }
 
         private void jobAssignmentBtn_Click(object sender, EventArgs e)
         {

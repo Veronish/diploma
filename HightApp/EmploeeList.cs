@@ -5,7 +5,7 @@ namespace HightApp
 {
     public partial class EmploeeList : Form
     {
-        // List<User> users = new List<User>();
+       
         public EmploeeList()
         {
 
