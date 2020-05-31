@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
 using System.Data.SQLite;
+using System.Windows.Forms;
 
 namespace HightApp
 {
@@ -54,11 +46,11 @@ namespace HightApp
                         if (Int32.Parse(dataGridView1.SelectedCells[0].Value.ToString()) == part.PartId)  // || check == part.Model || check == part.Mark || check == part.Description || check == part.Prise.ToString() || check == part.Remains.ToString())
                         {
                             StatClass.prtToEditId = Int32.Parse(dataGridView1.SelectedCells[0].Value.ToString());
-                            
+
                             EditPartForm editPartForm = new EditPartForm();
                             editPartForm.Show();
                             this.Close();
-                           
+
                             break;
                             // MessageBox.Show("FFFFFFFFFFFFFFFFFFFFFFFFF");
                         }
@@ -69,9 +61,9 @@ namespace HightApp
                     MessageBox.Show("Для изменения конкретной детали выберите ее номер", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch(Exception exp)
+            catch (Exception exp)
             {
-                MessageBox.Show("Для изменения конкретной детали выберите ее номер"+ exp, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Для изменения конкретной детали выберите ее номер" + exp, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -81,7 +73,7 @@ namespace HightApp
             {
                 try
                 {
-                    
+
                     SQLiteCommand command = new SQLiteCommand($"DELETE FROM dbParts WHERE  partsId= {Int32.Parse(dataGridView1.SelectedCells[0].Value.ToString())};", Connect);
                     Connect.Open();
                     SQLiteDataReader reader = command.ExecuteReader();
@@ -104,8 +96,6 @@ namespace HightApp
 
                 }
             }
-
-
         }
 
         public void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

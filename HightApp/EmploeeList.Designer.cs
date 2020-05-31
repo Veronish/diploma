@@ -35,6 +35,8 @@
             this.labelFioSet = new System.Windows.Forms.Label();
             this.labelLoginSet = new System.Windows.Forms.Label();
             this.labelPositionSet = new System.Windows.Forms.Label();
+            this.deleteBtn = new System.Windows.Forms.Button();
+            this.editBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -82,7 +84,7 @@
             // 
             this.labelFioSet.AutoSize = true;
             this.labelFioSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFioSet.Location = new System.Drawing.Point(201, 61);
+            this.labelFioSet.Location = new System.Drawing.Point(162, 61);
             this.labelFioSet.Name = "labelFioSet";
             this.labelFioSet.Size = new System.Drawing.Size(18, 25);
             this.labelFioSet.TabIndex = 4;
@@ -92,7 +94,7 @@
             // 
             this.labelLoginSet.AutoSize = true;
             this.labelLoginSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLoginSet.Location = new System.Drawing.Point(201, 36);
+            this.labelLoginSet.Location = new System.Drawing.Point(162, 36);
             this.labelLoginSet.Name = "labelLoginSet";
             this.labelLoginSet.Size = new System.Drawing.Size(18, 25);
             this.labelLoginSet.TabIndex = 5;
@@ -102,17 +104,40 @@
             // 
             this.labelPositionSet.AutoSize = true;
             this.labelPositionSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPositionSet.Location = new System.Drawing.Point(201, 86);
+            this.labelPositionSet.Location = new System.Drawing.Point(162, 86);
             this.labelPositionSet.Name = "labelPositionSet";
             this.labelPositionSet.Size = new System.Drawing.Size(18, 25);
             this.labelPositionSet.TabIndex = 6;
             this.labelPositionSet.Text = ".";
             // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteBtn.Location = new System.Drawing.Point(225, 146);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(179, 42);
+            this.deleteBtn.TabIndex = 7;
+            this.deleteBtn.Text = "Удалить";
+            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
+            // 
+            // editBtn
+            // 
+            this.editBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editBtn.Location = new System.Drawing.Point(225, 194);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(179, 42);
+            this.editBtn.TabIndex = 8;
+            this.editBtn.Text = "Редактировать";
+            this.editBtn.UseVisualStyleBackColor = true;
+            // 
             // EmploeeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 480);
+            this.ClientSize = new System.Drawing.Size(596, 437);
+            this.Controls.Add(this.editBtn);
+            this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.labelPositionSet);
             this.Controls.Add(this.labelLoginSet);
             this.Controls.Add(this.labelFioSet);
@@ -121,7 +146,7 @@
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.listBox1);
             this.Name = "EmploeeList";
-            this.Text = "EmploeeList";
+            this.Text = "Список сотрудников";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +161,7 @@
         private System.Windows.Forms.Label labelFioSet;
         private System.Windows.Forms.Label labelLoginSet;
         private System.Windows.Forms.Label labelPositionSet;
+        private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.Button editBtn;
     }
 }

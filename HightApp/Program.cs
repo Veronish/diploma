@@ -52,7 +52,9 @@ namespace HightApp
         public static String dbFileName = "GlobalDateBase.db";
 
         public static String textFromFile = "";
+
         public static int prtToEditId = -1;
+        public static int empleToEditId = -1;
 
         public static List<User> users = new List<User>();
         public static List<Part> parts = new List<Part>();
@@ -63,6 +65,8 @@ namespace HightApp
     {
         public static void LoadUser()
         {
+            StatClass.users.Clear();
+
             using (SQLiteConnection Connect = new SQLiteConnection($@"{StatClass.textFromFile}")) // в строке указывается к какой базе подключаемся
             {
 

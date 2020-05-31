@@ -32,7 +32,7 @@ namespace HightApp
                     MessageBox.Show("Деталь добавлена");
                     LoadUsers.LoadUser();
 
-                    this.DialogResult = DialogResult.OK;
+                   // this.DialogResult = DialogResult.OK;
                     PartsListForm partsListForm = new PartsListForm();
                     partsListForm.Show();
                     this.Close();
@@ -49,6 +49,9 @@ namespace HightApp
 
         private void Button2_Click(object sender, EventArgs e)
         {
+
+            PartsListForm partsListForm = new PartsListForm();
+            partsListForm.Show();
             this.Close();
         }
     }
