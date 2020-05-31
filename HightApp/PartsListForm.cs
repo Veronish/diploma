@@ -8,17 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SQLite;
+
 namespace HightApp
 {
     public partial class PartsListForm : Form
     {
         BindingSource bindingSource;
+        int columnIndex;
+        int rowIndex;
         public PartsListForm()
         {
             InitializeComponent();
 
             LoadParts.Load();
             DataGreedFill();
+
 
         }
         public void DataGreedFill()
@@ -40,28 +45,73 @@ namespace HightApp
 
         private void EditPartBtn_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (columnIndex == 0)//e.ColumnIndex == 0)//dataGridView1.CellClick == dataGridView1.SelectedCells[0])//.SelectedColumns.Contains(PartId))
+                {
+                    foreach (Part part in StatClass.parts)
+                    {
+                        if (Int32.Parse(dataGridView1.SelectedCells[0].Value.ToString()) == part.PartId)  // || check == part.Model || check == part.Mark || check == part.Description || check == part.Prise.ToString() || check == part.Remains.ToString())
+                        {
+                            StatClass.prtToEditId = Int32.Parse(dataGridView1.SelectedCells[0].Value.ToString());
+                            
+                            EditPartForm editPartForm = new EditPartForm();
+                            editPartForm.Show();
+                            this.Close();
+                           
+                            break;
+                            // MessageBox.Show("FFFFFFFFFFFFFFFFFFFFFFFFF");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Для изменения конкретной детали выберите ее номер", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch(Exception exp)
+            {
+                MessageBox.Show("Для изменения конкретной детали выберите ее номер"+ exp, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void DelitePartBtn_Click(object sender, EventArgs e)
         {
-            int check = Int32.Parse(dataGridView1.SelectedCells[0].Value.ToString());
-
-            try
+            using (SQLiteConnection Connect = new SQLiteConnection($@"{StatClass.textFromFile}")) // в строке указывается к какой базе подключаемся
             {
-                foreach (Part part in StatClass.parts)
+                try
                 {
-                    if (check == part.PartId)  // || check == part.Model || check == part.Mark || check == part.Description || check == part.Prise.ToString() || check == part.Remains.ToString())
-                    {
-                        MessageBox.Show("FFFFFFFFFFFFFFFFFFFFFFFFF");
-                    }
+                    
+                    SQLiteCommand command = new SQLiteCommand($"DELETE FROM dbParts WHERE  partsId= {Int32.Parse(dataGridView1.SelectedCells[0].Value.ToString())};", Connect);
+                    Connect.Open();
+                    SQLiteDataReader reader = command.ExecuteReader();
+
+                    //command.ExecuteNonQuery();
+                    Connect.Close();
+
+                    MessageBox.Show("Деталь удалена");
+                    LoadParts.Load();
+
+                    PartsListForm partsListForm = new PartsListForm();
+                    partsListForm.Show();
+                    this.Close();
+                }
+
+                catch (Exception exp)
+                {
+
+                    MessageBox.Show("Ошибка при подключении к базе данных! Проверьте правильность пути к базе данных в файле ConnectPath.txt и перезапустите программу." + exp);
+
                 }
             }
-            catch
-            {
-                MessageBox.Show("Для изменения конкретной детали выберите ее инвентарный номер", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-               
+
+
+        }
+
+        public void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            columnIndex = e.ColumnIndex;
+            rowIndex = e.RowIndex;
         }
     }
 }

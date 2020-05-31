@@ -73,7 +73,7 @@ namespace HightApp
                     StatClass.global_Name = "admin";
                     this.Hide();
                     AdminMainMenu adminMain = new AdminMainMenu();
-                    adminMain.ShowDialog();
+                    adminMain.Show();
                     break;
                 }
 
@@ -98,13 +98,13 @@ namespace HightApp
                     if (StatClass.users[i].AssesLvl == 1)
                     {
                         MasterMainMenu userMainMenu = new MasterMainMenu();
-                        userMainMenu.ShowDialog();
+                        userMainMenu.Show();
                         break;
                     }
                     else if (StatClass.users[i].AssesLvl == 2)
                     {
                         WorkerMainMenu workerMainMenu = new WorkerMainMenu();
-                        workerMainMenu.ShowDialog();
+                        workerMainMenu.Show();
                         break;
                     }
                     break;
@@ -112,7 +112,7 @@ namespace HightApp
                 else if (StatClass.users.Count == i) { MessageBox.Show("Пользователь " + loginTextBox.Text + " не найден!"); }
                 // i++;
             }
-                catch { MessageBox.Show("Ошибка! Проверьте правильность введенных данных!");  }
+                catch { MessageBox.Show("Ошибка! Проверьте правильность введенных данных!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);  }
             }
 
             
