@@ -8,51 +8,24 @@ namespace HightApp
 {
     public partial class JobAssignmentForm : Form
     {
-        List<JobAssignment> jobAssignments = new List<JobAssignment>();
+        int columnIndex;
+        int rowIndex;
         BindingSource bindingSource;
         public JobAssignmentForm()
         {
             InitializeComponent();
             JobAssignment jobAssignments = new JobAssignment();
             // jobAssignments.Technic.Model;
-            LoadJob();
+            LoadJob.Load();
             DataGreedFill();
         }
-        public void LoadJob()
-        {
-            using (SQLiteConnection Connect = new SQLiteConnection($@"{StatClass.textFromFile}")) // в строке указывается к какой базе подключаемся
-            {
-
-                SQLiteCommand command = new SQLiteCommand("SELECT * FROM dbJobAssignments;", Connect);
-
-                Connect.Open();
-
-                SQLiteDataReader reader = command.ExecuteReader();
-
-                foreach (DbDataRecord record in reader)
-                {
-                    JobAssignment jobAssignment = new JobAssignment();
-                    jobAssignment.JobId = Int32.Parse(record["jobId"].ToString());
-                    jobAssignment.Plase = record["plase"].ToString();
-                    jobAssignment.TechnicId = Int32.Parse(record["technicId"].ToString());
-                    jobAssignment.DateAppointment = record["dateAppointment"].ToString();
-                    jobAssignment.MasterId = Int32.Parse(record["master"].ToString());
-                    jobAssignment.ExecutorId = Int32.Parse(record["executor"].ToString());
-
-
-                    jobAssignments.Add(jobAssignment);
-
-                }
-                Connect.Close();
-            }
-
-        }
+       
 
         public void DataGreedFill()
         {
             dataGridView1.Rows.Clear();
             bindingSource = new BindingSource();
-            bindingSource.DataSource = jobAssignments;
+            bindingSource.DataSource = StatClass.jobAssignments;
             dataGridView1.DataSource = bindingSource;
             dataGridView1.AutoGenerateColumns = true;
 
@@ -100,7 +73,36 @@ namespace HightApp
 
         private void editBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (columnIndex == 0)
+                {
+                    foreach (JobAssignment jobAssignment in StatClass.jobAssignments)
+                    {
+                        if (Int32.Parse(dataGridView1.SelectedCells[0].Value.ToString()) == jobAssignment.JobId) 
+                        {
+                            StatClass.jobToEditId = Int32.Parse(dataGridView1.SelectedCells[0].Value.ToString());
 
+                            JobAssignmentEditForm jobAssignmentEditForm = new JobAssignmentEditForm();
+                            jobAssignmentEditForm.Show();
+                            this.Close();
+
+                            break;
+                            
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Для изменения конкретной записи выберите ее номер", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show("Для изменения конкретной записи выберите ее номер" + exp, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            
         }
 
         private void addJobBtn_Click(object sender, EventArgs e)
@@ -112,6 +114,7 @@ namespace HightApp
 
         private void backForm_Click(object sender, EventArgs e)
         {
+
             this.Close();
         }
 
@@ -123,6 +126,12 @@ namespace HightApp
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            columnIndex = e.ColumnIndex;
+            rowIndex = e.RowIndex;
         }
     }
 }

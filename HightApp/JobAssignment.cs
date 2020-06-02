@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace HightApp
 {
     [Serializable]
-    class JobAssignment
+    public class JobAssignment
     {
         public int JobId { get; set; }
         public string Plase { get; set; }

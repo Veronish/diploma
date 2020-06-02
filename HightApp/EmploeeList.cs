@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Windows.Forms;
-
-
 using System.Data.SQLite;
-using System.Data.Common;
+using System.Windows.Forms;
 
 namespace HightApp
 {
     public partial class EmploeeList : Form
     {
-       
+
         public EmploeeList()
         {
 
@@ -38,14 +35,10 @@ namespace HightApp
                     if (user.AssesLvl == 1) labelPositionSet.Text = "Мастер";
                     else if (user.AssesLvl == 2) labelPositionSet.Text = "Рабочий";
                     else if (user.AssesLvl == 3) labelPositionSet.Text = "Другое";
-                   // StatClass.empleToEditId = user.UserId;
+                    // StatClass.empleToEditId = user.UserId;
                     break;
                 }
-
-
             }
-           
-
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)

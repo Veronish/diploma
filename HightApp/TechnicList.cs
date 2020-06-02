@@ -9,13 +9,13 @@ namespace HightApp
 {
     public partial class TechnicList : Form
     {
-        List<Technic> technics = new List<Technic>();
+      
         string name;
         public TechnicList()
         {
             InitializeComponent();
             UpdateTechnicListBox();
-            LoadTechnic();
+            LoadTechnic.Load();
         }
 
         public void UpdateTechnicListBox()
@@ -39,38 +39,11 @@ namespace HightApp
             }
 
         }
-        public void LoadTechnic()
-        {
-            using (SQLiteConnection Connect = new SQLiteConnection($@"{StatClass.textFromFile}")) // в строке указывается к какой базе подключаемся
-            {
-
-                SQLiteCommand command = new SQLiteCommand("SELECT * FROM dbTechnic;", Connect);
-
-                Connect.Open();
-
-                SQLiteDataReader reader = command.ExecuteReader();
-
-                foreach (DbDataRecord record in reader)
-                {
-                    Technic technic = new Technic();
-                    technic.TechnicId = Int32.Parse(record["technicId"].ToString());
-                    technic.Mark = record["mark"].ToString();
-                    technic.Model = record["model"].ToString(); ;
-                    technic.Availability = record["availability"].ToString(); ;
-                    technic.DateLastRepair = record["dateLastRepair"].ToString(); ;
-                    technic.Defect = record["defect"].ToString(); ;
-
-                    technics.Add(technic);
-
-                }
-                Connect.Close();
-            }
-
-        }
+        
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Technic technic in technics)
+            foreach (Technic technic in StatClass.technics)
             {
                 if (listBox1.SelectedIndex + 1 == technic.TechnicId)
                 {

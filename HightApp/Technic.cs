@@ -3,7 +3,7 @@
 namespace HightApp
 {
     [Serializable]
-    class Technic
+    public class Technic
     {
         public int TechnicId { get; set; }
         public string Mark { get; set; }

@@ -28,169 +28,157 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.AddJobBtn = new System.Windows.Forms.Button();
+            this.plaseLabel = new System.Windows.Forms.Label();
+            this.technicIdLabel = new System.Windows.Forms.Label();
+            this.dateAppointmentLabel = new System.Windows.Forms.Label();
+            this.masterLabel = new System.Windows.Forms.Label();
+            this.executorLabel = new System.Windows.Forms.Label();
+            this.plaseTextBox = new System.Windows.Forms.TextBox();
+            this.technicIdComboBox = new System.Windows.Forms.ComboBox();
+            this.masterComboBox = new System.Windows.Forms.ComboBox();
+            this.executorComboBox = new System.Windows.Forms.ComboBox();
+            this.dateAppointmentTextBox = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // backBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(289, 345);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 46);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.backBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backBtn.Location = new System.Drawing.Point(477, 198);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(137, 46);
+            this.backBtn.TabIndex = 0;
+            this.backBtn.Text = "Отмена";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
-            // button2
+            // AddJobBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(17, 345);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddJobBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddJobBtn.Location = new System.Drawing.Point(17, 198);
+            this.AddJobBtn.Name = "AddJobBtn";
+            this.AddJobBtn.Size = new System.Drawing.Size(137, 46);
+            this.AddJobBtn.TabIndex = 1;
+            this.AddJobBtn.Text = "Сохранить";
+            this.AddJobBtn.UseVisualStyleBackColor = true;
+            this.AddJobBtn.Click += new System.EventHandler(this.AddJobBtn_Click);
             // 
-            // label1
+            // plaseLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.plaseLabel.AutoSize = true;
+            this.plaseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.plaseLabel.Location = new System.Drawing.Point(12, 14);
+            this.plaseLabel.Name = "plaseLabel";
+            this.plaseLabel.Size = new System.Drawing.Size(199, 25);
+            this.plaseLabel.TabIndex = 3;
+            this.plaseLabel.Text = "Место исполнения";
             // 
-            // label2
+            // technicIdLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(12, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.technicIdLabel.AutoSize = true;
+            this.technicIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.technicIdLabel.Location = new System.Drawing.Point(12, 51);
+            this.technicIdLabel.Name = "technicIdLabel";
+            this.technicIdLabel.Size = new System.Drawing.Size(142, 25);
+            this.technicIdLabel.TabIndex = 4;
+            this.technicIdLabel.Text = "Исп. техника";
             // 
-            // label3
+            // dateAppointmentLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(12, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
+            this.dateAppointmentLabel.AutoSize = true;
+            this.dateAppointmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateAppointmentLabel.Location = new System.Drawing.Point(12, 88);
+            this.dateAppointmentLabel.Name = "dateAppointmentLabel";
+            this.dateAppointmentLabel.Size = new System.Drawing.Size(185, 25);
+            this.dateAppointmentLabel.TabIndex = 5;
+            this.dateAppointmentLabel.Text = "Дата назанчения";
             // 
-            // label4
+            // masterLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(12, 128);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 25);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "label4";
+            this.masterLabel.AutoSize = true;
+            this.masterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.masterLabel.Location = new System.Drawing.Point(12, 125);
+            this.masterLabel.Name = "masterLabel";
+            this.masterLabel.Size = new System.Drawing.Size(87, 25);
+            this.masterLabel.TabIndex = 6;
+            this.masterLabel.Text = "Мастер";
             // 
-            // label5
+            // executorLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(12, 165);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 25);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "label5";
+            this.executorLabel.AutoSize = true;
+            this.executorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.executorLabel.Location = new System.Drawing.Point(12, 162);
+            this.executorLabel.Name = "executorLabel";
+            this.executorLabel.Size = new System.Drawing.Size(143, 25);
+            this.executorLabel.TabIndex = 7;
+            this.executorLabel.Text = "Исполнитель";
             // 
-            // label6
+            // plaseTextBox
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(12, 202);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 25);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "label6";
+            this.plaseTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.plaseTextBox.Location = new System.Drawing.Point(215, 11);
+            this.plaseTextBox.Name = "plaseTextBox";
+            this.plaseTextBox.Size = new System.Drawing.Size(399, 31);
+            this.plaseTextBox.TabIndex = 9;
             // 
-            // textBox1
+            // technicIdComboBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(215, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 31);
-            this.textBox1.TabIndex = 8;
+            this.technicIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.technicIdComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.technicIdComboBox.FormattingEnabled = true;
+            this.technicIdComboBox.Location = new System.Drawing.Point(215, 48);
+            this.technicIdComboBox.Name = "technicIdComboBox";
+            this.technicIdComboBox.Size = new System.Drawing.Size(399, 33);
+            this.technicIdComboBox.TabIndex = 14;
             // 
-            // textBox2
+            // masterComboBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(215, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 31);
-            this.textBox2.TabIndex = 9;
+            this.masterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.masterComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.masterComboBox.FormattingEnabled = true;
+            this.masterComboBox.Location = new System.Drawing.Point(215, 122);
+            this.masterComboBox.Name = "masterComboBox";
+            this.masterComboBox.Size = new System.Drawing.Size(399, 33);
+            this.masterComboBox.TabIndex = 15;
             // 
-            // textBox3
+            // executorComboBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(215, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 31);
-            this.textBox3.TabIndex = 10;
+            this.executorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.executorComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.executorComboBox.FormattingEnabled = true;
+            this.executorComboBox.Location = new System.Drawing.Point(215, 159);
+            this.executorComboBox.Name = "executorComboBox";
+            this.executorComboBox.Size = new System.Drawing.Size(399, 33);
+            this.executorComboBox.TabIndex = 16;
             // 
-            // textBox4
+            // dateAppointmentTextBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(215, 125);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(158, 31);
-            this.textBox4.TabIndex = 11;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(215, 162);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(158, 31);
-            this.textBox5.TabIndex = 12;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(215, 199);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(158, 31);
-            this.textBox6.TabIndex = 13;
+            this.dateAppointmentTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateAppointmentTextBox.Location = new System.Drawing.Point(215, 85);
+            this.dateAppointmentTextBox.Mask = "00/00/0000";
+            this.dateAppointmentTextBox.Name = "dateAppointmentTextBox";
+            this.dateAppointmentTextBox.Size = new System.Drawing.Size(399, 31);
+            this.dateAppointmentTextBox.TabIndex = 17;
+            this.dateAppointmentTextBox.ValidatingType = typeof(System.DateTime);
             // 
             // JobAssignmentAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 403);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(636, 263);
+            this.Controls.Add(this.dateAppointmentTextBox);
+            this.Controls.Add(this.executorComboBox);
+            this.Controls.Add(this.masterComboBox);
+            this.Controls.Add(this.technicIdComboBox);
+            this.Controls.Add(this.plaseTextBox);
+            this.Controls.Add(this.executorLabel);
+            this.Controls.Add(this.masterLabel);
+            this.Controls.Add(this.dateAppointmentLabel);
+            this.Controls.Add(this.technicIdLabel);
+            this.Controls.Add(this.plaseLabel);
+            this.Controls.Add(this.AddJobBtn);
+            this.Controls.Add(this.backBtn);
             this.Name = "JobAssignmentAddForm";
             this.Text = "JobAssignmentAddForm";
             this.ResumeLayout(false);
@@ -200,19 +188,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Button AddJobBtn;
+        private System.Windows.Forms.Label plaseLabel;
+        private System.Windows.Forms.Label technicIdLabel;
+        private System.Windows.Forms.Label dateAppointmentLabel;
+        private System.Windows.Forms.Label masterLabel;
+        private System.Windows.Forms.Label executorLabel;
+        private System.Windows.Forms.TextBox plaseTextBox;
+        private System.Windows.Forms.ComboBox technicIdComboBox;
+        private System.Windows.Forms.ComboBox masterComboBox;
+        private System.Windows.Forms.ComboBox executorComboBox;
+        private System.Windows.Forms.MaskedTextBox dateAppointmentTextBox;
     }
 }

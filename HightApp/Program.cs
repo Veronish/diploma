@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
@@ -36,17 +34,14 @@ namespace HightApp
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LogInForm());
-           
-
-          
+            Application.Run(new LogInForm());           
 
         }
     }
     public static class StatClass
     {
         //Данная переменная статического класса будет доступна откуда угодно в пределах проекта
-        public static String global_Name = "Тестовая строка";
+        public static String global_Name = "";
         public static String error = "";
         public static String pathToConnectFile = "..\\..\\ConnectPath.txt";
         public static String dbFileName = "GlobalDateBase.db";
@@ -55,9 +50,12 @@ namespace HightApp
 
         public static int prtToEditId = -1;
         public static int empleToEditId = -1;
-
+        public static int jobToEditId = -1;
+        
         public static List<User> users = new List<User>();
         public static List<Part> parts = new List<Part>();
+        public static List<JobAssignment> jobAssignments = new List<JobAssignment>();
+        public static List<Technic> technics = new List<Technic>();
 
     }
 
@@ -132,6 +130,73 @@ namespace HightApp
         }
     }
 
+    public static class LoadTechnic
+    {
+
+        public static void Load()
+        {
+            StatClass.technics.Clear();
+            using (SQLiteConnection Connect = new SQLiteConnection($@"{StatClass.textFromFile}")) // в строке указывается к какой базе подключаемся
+            {
+
+                SQLiteCommand command = new SQLiteCommand("SELECT * FROM dbTechnic;", Connect);
+
+                Connect.Open();
+
+                SQLiteDataReader reader = command.ExecuteReader();
+
+                foreach (DbDataRecord record in reader)
+                {
+                    Technic technic = new Technic();
+                    technic.TechnicId = Int32.Parse(record["technicId"].ToString());
+                    technic.Mark = record["mark"].ToString();
+                    technic.Model = record["model"].ToString(); ;
+                    technic.Availability = record["availability"].ToString(); ;
+                    technic.DateLastRepair = record["dateLastRepair"].ToString(); ;
+                    technic.Defect = record["defect"].ToString(); ;
+
+                    StatClass.technics.Add(technic);
+
+                }
+                Connect.Close();
+            }
+
+        }
+    }
+
+    public static class LoadJob
+    {
+        public static void Load()
+        {
+            StatClass.jobAssignments.Clear();
+            using (SQLiteConnection Connect = new SQLiteConnection($@"{StatClass.textFromFile}")) // в строке указывается к какой базе подключаемся
+            {
+
+                SQLiteCommand command = new SQLiteCommand("SELECT * FROM dbJobAssignments;", Connect);
+
+                Connect.Open();
+
+                SQLiteDataReader reader = command.ExecuteReader();
+
+                foreach (DbDataRecord record in reader)
+                {
+                    JobAssignment jobAssignment = new JobAssignment();
+                    jobAssignment.JobId = Int32.Parse(record["jobId"].ToString());
+                    jobAssignment.Plase = record["plase"].ToString();
+                    jobAssignment.TechnicId = Int32.Parse(record["technicId"].ToString());
+                    jobAssignment.DateAppointment = record["dateAppointment"].ToString();
+                    jobAssignment.MasterId = Int32.Parse(record["master"].ToString());
+                    jobAssignment.ExecutorId = Int32.Parse(record["executor"].ToString());
+
+
+                    StatClass.jobAssignments.Add(jobAssignment);
+
+                }
+                Connect.Close();
+            }
+
+        }
+    }
     public static class Hash
     {
         public static string GetMD5Hash(string text)
