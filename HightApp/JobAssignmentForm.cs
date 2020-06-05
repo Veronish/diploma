@@ -114,7 +114,6 @@ namespace HightApp
 
         private void backForm_Click(object sender, EventArgs e)
         {
-
             this.Close();
         }
 
@@ -129,6 +128,12 @@ namespace HightApp
         }
 
         public void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            columnIndex = e.ColumnIndex;
+            rowIndex = e.RowIndex;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             columnIndex = e.ColumnIndex;
             rowIndex = e.RowIndex;

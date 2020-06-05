@@ -103,5 +103,19 @@ namespace HightApp
             columnIndex = e.ColumnIndex;
             rowIndex = e.RowIndex;
         }
+
+        private void canselBtn_Click(object sender, EventArgs e)
+        {
+            PartsListForm partsListForm = new PartsListForm();
+            partsListForm.Show();
+            this.Close();
+        }
+
+        private void createDoxBtn_Click(object sender, EventArgs e)
+        {
+            OrderPartdForm orderPartdForm = new OrderPartdForm();
+            orderPartdForm.Show();
+            this.Close();
+        }
     }
 }

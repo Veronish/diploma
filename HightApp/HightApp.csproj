@@ -129,6 +129,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderPartdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderPartdForm.Designer.cs">
+      <DependentUpon>OrderPartdForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Part.cs" />
     <Compile Include="PartsListForm.cs">
       <SubType>Form</SubType>

@@ -33,13 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.addJobBtn = new System.Windows.Forms.Button();
             this.jobId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.plase = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.technicId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateAppointment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.master = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.executor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addJobBtn = new System.Windows.Forms.Button();
             this.delBtn = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
             this.backForm = new System.Windows.Forms.Button();
@@ -81,6 +81,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -93,6 +94,49 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(941, 373);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // jobId
+            // 
+            this.jobId.DataPropertyName = "jobId";
+            this.jobId.HeaderText = "№";
+            this.jobId.Name = "jobId";
+            this.jobId.ReadOnly = true;
+            // 
+            // plase
+            // 
+            this.plase.DataPropertyName = "plase";
+            this.plase.HeaderText = "Место исполнения";
+            this.plase.Name = "plase";
+            this.plase.ReadOnly = true;
+            // 
+            // technicId
+            // 
+            this.technicId.DataPropertyName = "technicId";
+            this.technicId.HeaderText = "№ исп. техники";
+            this.technicId.Name = "technicId";
+            this.technicId.ReadOnly = true;
+            // 
+            // dateAppointment
+            // 
+            this.dateAppointment.DataPropertyName = "dateAppointment";
+            this.dateAppointment.HeaderText = "Дата исполнения";
+            this.dateAppointment.Name = "dateAppointment";
+            this.dateAppointment.ReadOnly = true;
+            // 
+            // master
+            // 
+            this.master.DataPropertyName = "MasterId";
+            this.master.HeaderText = "Мастер";
+            this.master.Name = "master";
+            this.master.ReadOnly = true;
+            // 
+            // executor
+            // 
+            this.executor.DataPropertyName = "ExecutorId";
+            this.executor.HeaderText = "Исполнитель";
+            this.executor.Name = "executor";
+            this.executor.ReadOnly = true;
             // 
             // addJobBtn
             // 
@@ -104,42 +148,6 @@
             this.addJobBtn.Text = "Добавить";
             this.addJobBtn.UseVisualStyleBackColor = true;
             this.addJobBtn.Click += new System.EventHandler(this.addJobBtn_Click);
-            // 
-            // jobId
-            // 
-            this.jobId.DataPropertyName = "jobId";
-            this.jobId.HeaderText = "№";
-            this.jobId.Name = "jobId";
-            // 
-            // plase
-            // 
-            this.plase.DataPropertyName = "plase";
-            this.plase.HeaderText = "Место исполнения";
-            this.plase.Name = "plase";
-            // 
-            // technicId
-            // 
-            this.technicId.DataPropertyName = "technicId";
-            this.technicId.HeaderText = "№ исп. техники";
-            this.technicId.Name = "technicId";
-            // 
-            // dateAppointment
-            // 
-            this.dateAppointment.DataPropertyName = "dateAppointment";
-            this.dateAppointment.HeaderText = "Дата исполнения";
-            this.dateAppointment.Name = "dateAppointment";
-            // 
-            // master
-            // 
-            this.master.DataPropertyName = "MasterId";
-            this.master.HeaderText = "Мастер";
-            this.master.Name = "master";
-            // 
-            // executor
-            // 
-            this.executor.DataPropertyName = "ExecutorId";
-            this.executor.HeaderText = "Исполнитель";
-            this.executor.Name = "executor";
             // 
             // delBtn
             // 
