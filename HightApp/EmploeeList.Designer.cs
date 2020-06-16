@@ -130,6 +130,7 @@
             this.editBtn.TabIndex = 8;
             this.editBtn.Text = "Редактировать";
             this.editBtn.UseVisualStyleBackColor = true;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // EmploeeList
             // 

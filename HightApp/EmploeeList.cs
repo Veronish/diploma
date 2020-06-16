@@ -12,6 +12,7 @@ namespace HightApp
 
             InitializeComponent();
             GeberateListbox();
+            LoadUsers.LoadUser();
 
         }
 
@@ -50,7 +51,7 @@ namespace HightApp
                 using (SQLiteConnection Connect = new SQLiteConnection($@"{StatClass.textFromFile}")) // в строке указывается к какой базе подключаемся
                 {
 
-                    SQLiteCommand command = new SQLiteCommand($"DELETE FROM dbUsers WHERE login = '{listBox1.SelectedItem.ToString()}';", Connect);
+                    SQLiteCommand command = new SQLiteCommand($"DELETE FROM dbUsers WHERE login = '{listBox1.SelectedItem}';", Connect);
 
                     Connect.Open();
 
@@ -67,6 +68,24 @@ namespace HightApp
             {
                 // какое-то действие при нажатии на НЕТ
             }
+        }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+
+            foreach(User user in StatClass.users)
+            {
+                if(listBox1.SelectedItem.ToString() == user.Logins)
+                {
+                    StatClass.empleToEditId = user.UserId;
+                   // user.UserId = StatClass.empleToEditId;
+                }
+            }
+
+            EditEmploeeForm editEmploeeForm = new EditEmploeeForm();
+            editEmploeeForm.Show();
+
+            Hide();
         }
     }
 }

@@ -99,7 +99,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Name = "WorkerMainMenu";
-            this.Text = "WorkerMainMenu";
+            this.Text = "Главное меню";
             this.ResumeLayout(false);
             this.PerformLayout();
 

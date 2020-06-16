@@ -126,7 +126,7 @@
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.labelinfo2);
             this.Name = "MasterMainMenu";
-            this.Text = "UserMainMenu";
+            this.Text = "Главное меню";
             this.ResumeLayout(false);
             this.PerformLayout();
 

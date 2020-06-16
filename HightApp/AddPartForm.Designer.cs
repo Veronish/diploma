@@ -175,7 +175,7 @@
             this.Controls.Add(this.markTextBox);
             this.Controls.Add(this.label1);
             this.Name = "AddPartForm";
-            this.Text = "AddPartForm";
+            this.Text = "Добавление детали";
             this.ResumeLayout(false);
             this.PerformLayout();
 

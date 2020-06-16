@@ -193,7 +193,7 @@
             this.Controls.Add(this.addJobBtn);
             this.Controls.Add(this.dataGridView1);
             this.Name = "JobAssignmentForm";
-            this.Text = "LobAssignment";
+            this.Text = "Назначения на работу";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

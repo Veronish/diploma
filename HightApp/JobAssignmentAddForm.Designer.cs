@@ -180,7 +180,7 @@
             this.Controls.Add(this.AddJobBtn);
             this.Controls.Add(this.backBtn);
             this.Name = "JobAssignmentAddForm";
-            this.Text = "JobAssignmentAddForm";
+            this.Text = "Добавление назначений на работу";
             this.ResumeLayout(false);
             this.PerformLayout();
 

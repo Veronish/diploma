@@ -66,7 +66,7 @@
             // loginTextBox
             // 
             this.loginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loginTextBox.Location = new System.Drawing.Point(160, 80);
+            this.loginTextBox.Location = new System.Drawing.Point(143, 58);
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(175, 31);
             this.loginTextBox.TabIndex = 2;
@@ -74,7 +74,7 @@
             // passwordTextBox
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passwordTextBox.Location = new System.Drawing.Point(160, 117);
+            this.passwordTextBox.Location = new System.Drawing.Point(143, 95);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(175, 31);
@@ -84,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(69, 86);
+            this.label1.Location = new System.Drawing.Point(52, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(69, 120);
+            this.label2.Location = new System.Drawing.Point(52, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 25);
             this.label2.TabIndex = 5;
@@ -113,7 +113,7 @@
             // fioTextBox
             // 
             this.fioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fioTextBox.Location = new System.Drawing.Point(160, 154);
+            this.fioTextBox.Location = new System.Drawing.Point(143, 132);
             this.fioTextBox.Name = "fioTextBox";
             this.fioTextBox.Size = new System.Drawing.Size(175, 31);
             this.fioTextBox.TabIndex = 8;
@@ -122,7 +122,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(69, 157);
+            this.label5.Location = new System.Drawing.Point(52, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 25);
             this.label5.TabIndex = 10;
@@ -132,7 +132,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(69, 194);
+            this.label6.Location = new System.Drawing.Point(52, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 25);
             this.label6.TabIndex = 11;
@@ -147,7 +147,7 @@
             "master",
             "worker",
             "else"});
-            this.comboBox1.Location = new System.Drawing.Point(160, 191);
+            this.comboBox1.Location = new System.Drawing.Point(143, 169);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(175, 33);
             this.comboBox1.TabIndex = 12;
@@ -169,6 +169,7 @@
             this.Controls.Add(this.button_cansel);
             this.Controls.Add(this.button_register);
             this.Name = "RegisterForm";
+            this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -87,7 +87,7 @@
             this.Controls.Add(this.goBackBtn);
             this.Controls.Add(this.deleteBtn);
             this.Name = "DeleteUserForm";
-            this.Text = "DeleteUserForm";
+            this.Text = "Удаление пользователя";
             this.ResumeLayout(false);
             this.PerformLayout();
 

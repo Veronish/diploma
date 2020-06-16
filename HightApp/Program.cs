@@ -12,15 +12,12 @@ using System.Data.Common;
 
 
 namespace HightApp
-{
-    
+{    
     class Program
-    {
-       
+    {       
         [STAThread]
         static void Main()
         {
-
             using (FileStream fstream = File.OpenRead($"{StatClass.pathToConnectFile}"))
             {
                 // преобразуем строку в байты
@@ -51,6 +48,7 @@ namespace HightApp
         public static int prtToEditId = -1;
         public static int empleToEditId = -1;
         public static int jobToEditId = -1;
+        public static int technivToEditId = -1;
         
         public static List<User> users = new List<User>();
         public static List<Part> parts = new List<Part>();
@@ -84,8 +82,7 @@ namespace HightApp
                     user.Fio = record["fio"].ToString();
                     user.AssesLvl = Int32.Parse(record["assesLvl"].ToString());
 
-                    StatClass.users.Add(user);
-                    
+                    StatClass.users.Add(user);                    
 
                 }
                 Connect.Close();
@@ -95,8 +92,7 @@ namespace HightApp
     }
 
     public static class LoadParts
-    {
-        
+    {        
         public static void Load()
         {
             StatClass.parts.Clear();
@@ -120,9 +116,7 @@ namespace HightApp
                     part.Remains = Int32.Parse(record["remains"].ToString());
                     part.Prise = float.Parse(record["prise"].ToString());
 
-
                     StatClass.parts.Add(part);
-
                 }
                 Connect.Close();
             }
@@ -132,7 +126,6 @@ namespace HightApp
 
     public static class LoadTechnic
     {
-
         public static void Load()
         {
             StatClass.technics.Clear();

@@ -128,11 +128,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(477, 149);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(399, 126);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(153, 46);
             this.button1.TabIndex = 10;
-            this.button1.Text = "exit";
+            this.button1.Text = "Выход";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -154,7 +155,7 @@
             this.Controls.Add(this.info1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminMainMenu";
-            this.Text = "AdminMainMenu";
+            this.Text = "Меню администратора";
             this.ResumeLayout(false);
             this.PerformLayout();
 
