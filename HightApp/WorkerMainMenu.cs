@@ -15,6 +15,7 @@ namespace HightApp
         public WorkerMainMenu()
         {
             InitializeComponent();
+            userName.Text = StatClass.global_Name;
         }
 
         private void button1_Click(object sender, EventArgs e)

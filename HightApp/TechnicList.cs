@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.SQLite;
 using System.Windows.Forms;
-
-
 using System.Data.SQLite;
 using System.Data.Common;
+
 
 namespace HightApp
 {
@@ -43,9 +42,7 @@ namespace HightApp
                 Connect.Close();
             }
 
-        }
-        
-
+        }      
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach (Technic technic in StatClass.technics)
@@ -97,9 +94,7 @@ namespace HightApp
             {
                 // какое-то действие при нажатии на НЕТ
             }
-        }
-
-       
+        }       
 
         private void EditBtn_Click(object sender, EventArgs e)
         {

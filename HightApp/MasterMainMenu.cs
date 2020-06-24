@@ -17,14 +17,8 @@ namespace HightApp
         public MasterMainMenu()
         {
             InitializeComponent();
-            labelUserName.Text = StatClass.global_Name;
-
-            
-        }
-
-      
-
-
+            labelUserName.Text = StatClass.global_Name;            
+        }  
         private void jobAssignmentBtn_Click(object sender, EventArgs e)
         {
             JobAssignmentForm jobAssignment = new JobAssignmentForm();

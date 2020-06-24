@@ -156,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 421);
+            this.ClientSize = new System.Drawing.Size(455, 301);
             this.Controls.Add(this.CanselBtn);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.textBox5);

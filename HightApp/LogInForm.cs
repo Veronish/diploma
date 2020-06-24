@@ -33,7 +33,7 @@ namespace HightApp
             for (int i = 0; i <= StatClass.users.Count; i++) // Ищем пользователя и проверяем правильность пароля.
             {
                 try {
-                if (loginTextBox.Text == "1" && passwordTextBox.Text == "1")
+                if (loginTextBox.Text == "admin" && passwordTextBox.Text == "9854178563")
                 {
                     StatClass.global_Name = "admin";
                     this.Hide();

@@ -50,9 +50,9 @@
             this.labelMark.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMark.Location = new System.Drawing.Point(132, 12);
             this.labelMark.Name = "labelMark";
-            this.labelMark.Size = new System.Drawing.Size(60, 25);
+            this.labelMark.Size = new System.Drawing.Size(53, 25);
             this.labelMark.TabIndex = 0;
-            this.labelMark.Text = "Mark";
+            this.labelMark.Text = "Имя";
             // 
             // listBox1
             // 
@@ -71,9 +71,9 @@
             this.labelModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelModel.Location = new System.Drawing.Point(132, 37);
             this.labelModel.Name = "labelModel";
-            this.labelModel.Size = new System.Drawing.Size(71, 25);
+            this.labelModel.Size = new System.Drawing.Size(89, 25);
             this.labelModel.TabIndex = 2;
-            this.labelModel.Text = "Model";
+            this.labelModel.Text = "Модель";
             // 
             // labelAvailability
             // 
@@ -81,9 +81,9 @@
             this.labelAvailability.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAvailability.Location = new System.Drawing.Point(132, 62);
             this.labelAvailability.Name = "labelAvailability";
-            this.labelAvailability.Size = new System.Drawing.Size(115, 25);
+            this.labelAvailability.Size = new System.Drawing.Size(140, 25);
             this.labelAvailability.TabIndex = 3;
-            this.labelAvailability.Text = "Availability";
+            this.labelAvailability.Text = "Доступность";
             // 
             // labelDateRepair
             // 
@@ -91,9 +91,9 @@
             this.labelDateRepair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDateRepair.Location = new System.Drawing.Point(132, 87);
             this.labelDateRepair.Name = "labelDateRepair";
-            this.labelDateRepair.Size = new System.Drawing.Size(173, 25);
+            this.labelDateRepair.Size = new System.Drawing.Size(274, 25);
             this.labelDateRepair.TabIndex = 4;
-            this.labelDateRepair.Text = "Date Last Repair";
+            this.labelDateRepair.Text = "Дата последнего ремонта";
             // 
             // labelDefect
             // 
@@ -101,15 +101,15 @@
             this.labelDefect.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDefect.Location = new System.Drawing.Point(132, 112);
             this.labelDefect.Name = "labelDefect";
-            this.labelDefect.Size = new System.Drawing.Size(74, 25);
+            this.labelDefect.Size = new System.Drawing.Size(144, 25);
             this.labelDefect.TabIndex = 5;
-            this.labelDefect.Text = "Defect";
+            this.labelDefect.Text = "Особенности";
             // 
             // labelDatePrepairSet
             // 
             this.labelDatePrepairSet.AutoSize = true;
             this.labelDatePrepairSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDatePrepairSet.Location = new System.Drawing.Point(311, 87);
+            this.labelDatePrepairSet.Location = new System.Drawing.Point(412, 87);
             this.labelDatePrepairSet.Name = "labelDatePrepairSet";
             this.labelDatePrepairSet.Size = new System.Drawing.Size(18, 25);
             this.labelDatePrepairSet.TabIndex = 9;
@@ -119,7 +119,7 @@
             // 
             this.labelAvailSet.AutoSize = true;
             this.labelAvailSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAvailSet.Location = new System.Drawing.Point(311, 62);
+            this.labelAvailSet.Location = new System.Drawing.Point(412, 62);
             this.labelAvailSet.Name = "labelAvailSet";
             this.labelAvailSet.Size = new System.Drawing.Size(18, 25);
             this.labelAvailSet.TabIndex = 8;
@@ -129,7 +129,7 @@
             // 
             this.labelModelSet.AutoSize = true;
             this.labelModelSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelModelSet.Location = new System.Drawing.Point(311, 37);
+            this.labelModelSet.Location = new System.Drawing.Point(412, 37);
             this.labelModelSet.Name = "labelModelSet";
             this.labelModelSet.Size = new System.Drawing.Size(18, 25);
             this.labelModelSet.TabIndex = 7;
@@ -139,7 +139,7 @@
             // 
             this.labelMarkSet.AutoSize = true;
             this.labelMarkSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMarkSet.Location = new System.Drawing.Point(311, 9);
+            this.labelMarkSet.Location = new System.Drawing.Point(412, 12);
             this.labelMarkSet.Name = "labelMarkSet";
             this.labelMarkSet.Size = new System.Drawing.Size(18, 25);
             this.labelMarkSet.TabIndex = 6;
@@ -154,7 +154,7 @@
             this.textBoxDefectSet.Multiline = true;
             this.textBoxDefectSet.Name = "textBoxDefectSet";
             this.textBoxDefectSet.ReadOnly = true;
-            this.textBoxDefectSet.Size = new System.Drawing.Size(200, 302);
+            this.textBoxDefectSet.Size = new System.Drawing.Size(328, 37);
             this.textBoxDefectSet.TabIndex = 11;
             // 
             // deleteBtn
@@ -194,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 435);
+            this.ClientSize = new System.Drawing.Size(656, 426);
             this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.deleteBtn);
